@@ -24,7 +24,7 @@ highlight clear
 set termguicolors
 syntax on
 syntax reset
-let g:colors_name = "nova"
+let g:colors_name = "bright"
 call s:highlight_helper("Normal", "#CCC", "")
 
 " NEOVIM TERMINAL MODE
