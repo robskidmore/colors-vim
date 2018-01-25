@@ -22,14 +22,14 @@ let g:airline#themes#brightnova#palette.insert = airline#themes#generate_color_m
 let g:airline#themes#brightnova#palette.insert_modified = s:modified
 
 " Visual mode
-let s:V1 = [ "#EEEEEE" , "#eba8dc" , "" , "" ]
+let s:V1 = [ "#333333" , "#eba8dc" , "" , "" ]
 let s:V2 = s:N2
 let s:V3 = s:N3
 let g:airline#themes#brightnova#palette.visual = airline#themes#generate_color_map(s:V1, s:V2, s:V3)
 let g:airline#themes#brightnova#palette.visual_modified = s:modified
 
 " Replace mode
-let s:R1 = [ "#EEEEEE" , "#b4adfb" , "" , "" ]
+let s:R1 = [ "#333333" , "#b4adfb" , "" , "" ]
 let s:R2 = s:N2
 let s:R3 = s:N3
 let g:airline#themes#brightnova#palette.replace = airline#themes#generate_color_map(s:R1, s:R2, s:R3)
@@ -43,7 +43,7 @@ let g:airline#themes#brightnova#palette.inactive = airline#themes#generate_color
 let g:airline#themes#brightnova#palette.inactive_modified = s:modified
 
 " Warning/Error Segment
-let s:AirlineError = [ "#EEEEEE" , "#f9a6a6" , "" , "" ]
+let s:AirlineError = [ "#333333" , "#f9a6a6" , "" , "" ]
 let g:airline#themes#brightnova#palette.normal.airline_error = s:AirlineError
 let g:airline#themes#brightnova#palette.insert.airline_error = s:AirlineError
 let g:airline#themes#brightnova#palette.visual.airline_error = s:AirlineError
@@ -53,7 +53,7 @@ let g:airline#themes#brightnova#palette.insert_modified.airline_error = s:Airlin
 let g:airline#themes#brightnova#palette.visual_modified.airline_error = s:AirlineError
 let g:airline#themes#brightnova#palette.replace_modified.airline_error = s:AirlineError
 
-let s:AirlineWarning = [ "#EEEEEE" , "#ffdda9" , "" , "" ]
+let s:AirlineWarning = [ "#333333" , "#ffdda9" , "" , "" ]
 let g:airline#themes#brightnova#palette.normal.airline_warning = s:AirlineWarning
 let g:airline#themes#brightnova#palette.insert.airline_warning = s:AirlineWarning
 let g:airline#themes#brightnova#palette.visual.airline_warning = s:AirlineWarning
