@@ -13,8 +13,10 @@ function! s:highlight_helper(...)
   let l:foreground_color = a:2
   let l:background_color = empty(a:3) ? "${uiGroups.background}" : a:3
   let l:gui = a:0 == 3 ? "None" : a:4
+  let l:cterm = empty(a:5) ? "NONE" : "inverse"
+  let l:gui_inverse = empty(a:5) ? "" : ",inverse"
 
-  exec "highlight " . l:syntax_group . " guifg=" . l:foreground_color . " guibg=" . l:background_color . " gui=" . l:gui . " cterm=NONE term=NONE"
+  exec "highlight " . l:syntax_group . " guifg=" . l:foreground_color . " guibg=" . l:background_color . " gui=" . l:gui . l:gui_inverse . " cterm=" . l:cterm . " term=NONE"
 endfunction
 
 
@@ -63,12 +65,13 @@ call s:highlight_helper("SpellCap", "${uiGroups.userActionNeeded}", "")
 call s:highlight_helper("Todo", "${uiGroups.userActionNeeded}", "")
 call s:highlight_helper("NeomakeErrorSign", "${uiGroups.userActionNeeded}", "")
 call s:highlight_helper("NeomakeWarningSign", "${uiGroups.userActionNeeded}", "")
+call s:highlight_helper("Todo", "${uiGroups.userActionNeeded}", "", "", "inverse")
 
 " USER CURRENT STATE
 call s:highlight_helper("MatchParen", "${uiGroups.userCurrentState}", "NONE")
 call s:highlight_helper("CursorLineNr", "${uiGroups.userCurrentState}", "")
-call s:highlight_helper("Visual", "${uiGroups.background}", "${uiGroups.userCurrentState}")
-call s:highlight_helper("VisualNOS", "${uiGroups.background}", "${uiGroups.userCurrentState}")
+call s:highlight_helper("Visual", "${uiGroups.background}", "${uiGroups.userCurrentState}", "", "inverse")
+call s:highlight_helper("VisualNOS", "${uiGroups.background}", "${uiGroups.userCurrentState}", "", "inverse")
 call s:highlight_helper("Folded", "${uiGroups.userCurrentState}", "")
 call s:highlight_helper("FoldColumn", "${uiGroups.userCurrentState}", "")
 call s:highlight_helper("IncSearch", "${uiGroups.userCurrentState}", "${uiGroups.backgroundShade}")
